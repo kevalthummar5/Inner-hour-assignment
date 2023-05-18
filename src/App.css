@@ -1,0 +1,212 @@
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   /* background-color: #f5f5f5; */
+   font-family: "Quicksand";
+}
+.App {
+   background: #f5f5f5;
+   position: relative;
+   z-index: 1;
+}
+.App-header {
+   height: 10vh;
+   background: #ffffff;
+   box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.08);
+}
+.App-header svg {
+   margin: 10px 10%;
+}
+.App-subheader {
+   /* border: 2px solid lightcyan; */
+   margin: 10px 10%;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+.App-subheader h1 {
+   font-style: normal;
+   font-weight: 600;
+   font-size: 24px;
+   line-height: 30px;
+   /* identical to box height */
+
+   color: #252525;
+}
+.App-search-input {
+   position: relative;
+}
+.App-search-input input {
+   width: 384px;
+   height: 56px;
+   left: 936px;
+   top: 120px;
+   font-size: 1.5rem;
+   padding: 10px 50px 10px 20px;
+   background: #ffffff;
+   border: 1px solid #e0e0e0;
+   border-radius: 8px;
+}
+.App-search-input svg {
+   scale: 1.5;
+   position: absolute;
+   top: 16px;
+   right: 10px;
+}
+.App-body {
+   overflow: auto;
+   padding: 0 10px 0 0;
+   margin: 10px 8%;
+   display: flex;
+   gap: 20px;
+   flex-wrap: wrap;
+   justify-content: space-between;
+   height: 80vh;
+   /* border: 2px solid green; */
+}
+
+.SmallImageCard {
+   /* border: 2px solid salmon; */
+   margin: 10px;
+   border-radius: 16px;
+   width: 20vw;
+   margin: 15px auto;
+   height: 364px;
+   max-width: 384px;
+   min-width: 320px;
+   overflow: hidden;
+   cursor: pointer;
+   border: 1px solid #e0e0e0;
+   background: #ffffff;
+}
+
+.SmallImageCard:hover {
+   box-shadow: 2px 6px 20px rgba(0, 0, 0, 0.08);
+}
+.SmallImageCard:hover .SmallImageCard-head {
+   color: #ffb41d;
+}
+.SmallImageCard img {
+   height: 172px;
+   object-fit: cover;
+}
+.SmallImageCard div {
+   /* border: 2px solid firebrick; */
+   display: flex;
+   justify-content: space-between;
+   height: 48%;
+   flex-direction: column;
+   align-items: center;
+   padding: 24px 10px;
+   width: 100%;
+   overflow: hidden;
+}
+.SmallImageCard-head {
+   color: #252525;
+}
+.SmallImageCard-description {
+   color: #3f3f3f;
+   height: 150px;
+   display: -webkit-box;
+   -webkit-line-clamp: 3;
+   -webkit-box-orient: vertical;
+   text-overflow: clip;
+}
+.BlogModel {
+   z-index: 2;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   position: absolute;
+   width: 100%;
+   top: 0;
+   left: 0;
+   height: 100%;
+   transition: all 0.5s;
+}
+.backdrop {
+   position: absolute;
+   top: 0;
+   right: 0;
+   height: 99.9vh;
+   width: 100%;
+   z-index: 5;
+
+   background: rgba(46, 46, 46, 0.7);
+}
+.BlogModel-wrap {
+   position: relative;
+   z-index: 6;
+   margin: auto;
+}
+.BlogModel-head {
+   margin-bottom: 20px;
+   font-weight: 600;
+   font-size: 28px;
+   line-height: 36px;
+}
+.BlogModel-description {
+   height: 220px;
+   padding-right: 20px;
+   /* padding-bottom: 10px; */
+   overflow: auto;
+   font-weight: 500;
+   font-size: 18px;
+   line-height: 36px;
+}
+.BlogModel-body div {
+   /* border: 2px solid blue; */
+   overflow: hidden;
+   padding-bottom: 10px;
+   max-height: 48%;
+}
+.BlogModel-body {
+   position: relative;
+   z-index: 6;
+   max-width: 996px;
+   max-height: 860px;
+   border-radius: 16px;
+   width: 50vw;
+   margin: 15px auto;
+   height: 80vh;
+   overflow: hidden;
+   border: 1px solid #e0e0e0;
+   background: #ffffff;
+}
+.BlogModel-body img {
+   height: 360px;
+   object-fit: cover;
+}
+.BlogModel-close {
+   z-index: 12;
+   font-weight: 900;
+   position: absolute;
+   color: white;
+   cursor: pointer;
+   padding: 4px 7px;
+   border-radius: 50%;
+   background-color: #252525;
+   /* border: 2px solid black; */
+   top: -5px;
+   right: -20px;
+}
+.BlogModel-body div {
+   padding: 20px;
+}
+::-webkit-scrollbar {
+   width: 0.5em;
+   height: 1rem;
+}
+::-webkit-scrollbar-track {
+   background: rgb(240, 239, 239);
+   border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+   background: rgba(165, 161, 161, 0.479);
+   border-radius: 50px;
+}
+::-webkit-scrollbar-thumb:hover {
+   background: #0057ff;
+}
